@@ -25,9 +25,9 @@ jobs:
     - name: Deploy files via SCP
       uses: appleboy/scp-action@v0.1.4
       with:
-        host: ${{ secrets.SERVER_IP }}        # Add this secret in GitHub (e.g., 152.42.202.85)
-        username: ${{ secrets.SERVER_USER }}  # Add this secret in GitHub (e.g., root)
-        key: ${{ secrets.SERVER }}    # Add your private key in GitHub Secrets
+        host: 152.42.202.85        # Add this secret in GitHub (e.g., 152.42.202.85)
+        username: root  # Add this secret in GitHub (e.g., root)
+        key: ${{ secrets.SERVER_SSH_KEY }}    # Add your private key in GitHub Secrets
         source: "."                           # If you build the project, change to e.g. "dist/*" or "build/*"
         target: "/var/www/html/"   # Change this to your actual deployment directory on the server
         strip_components: 0
