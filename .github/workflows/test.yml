@@ -27,7 +27,7 @@ jobs:
       with:
         host: 152.42.202.85        # Add this secret in GitHub (e.g., 152.42.202.85)
         username: root  # Add this secret in GitHub (e.g., root)
-        key: ${{ secrets.SERVER }}    # Add your private key in GitHub Secrets
+        key: ${{ secrets.SERVER_SSH_KEY }}    # Add your private key in GitHub Secrets
         source: "."                           # If you build the project, change to e.g. "dist/*" or "build/*"
         target: "/var/www/html/"   # Change this to your actual deployment directory on the server
         strip_components: 0
